@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Felicitacion</title>
+    <link rel="stylesheet" href="CSS/ejs3.css" type="text/css"/>
+    <!--Links de bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <header>
+        <h1><a href="#">¡Crea tu tarjeta de invitacion!</a></h1>
+    </header>
+    <section class="row conteiner-fluid" id="todo">
+        <aside id="lateral" class="col-sm-3">
+            <select id="temas">
+                <option value="0">Comenzar...</option>
+                <option value="nodos">ELIGE UN TEMA</option>
+            </select>
+        </aside>  
+        <section id="principal" class="col-sm-9">
+
+
+            <article id="nodos" class="contenedor">
+
+                <h3>Seleccione una imagen</h3>  
+                <select id="imagenusable">
+                    <option value="0">Imagen...</option>
+                    <option value="1">Navidad</option>
+                    <option value="2">Halloween</option>
+                    <option value="3">Planetas</option>
+                </select>     
+                <img src="imagenes/usable.png" id="foto" class="foto" style="display:none" />
+                <img src="imagenes/navidad.jpeg" class="galeria" onclick="fotografias('navidad')"/>---
+                <img src="imagenes/halloween.jpeg" class="galeria" onclick="fotografias('halloween')"/>---
+                <img src="imagenes/planetas.jpeg" class="galeria" onclick="fotografias('planetas')"/>---
+
+                <h3>Eligamos un Marco</h3>
+                <select id="marco">
+                    <option value="0">Borde...</option>
+                    <option value="solid">Solido</option>
+                    <option value="dotted">Punteado corto</option>
+                    <option value="dashed">Punteado largo</option>
+                    <option value="double">Doble</option>
+                </select>
+                <br>  <br>
+
+                <h3>Rellena los datos</h3>
+                <input type="text" id="titulo" placeholder="Ingrese el titulo"/>
+                <input type="text" id="subtitulo" placeholder="Ingrese el subtitulo"/>
+                <input type="text" id="remitente" placeholder="Remitente(Autor)"/>
+                <input type="text" id="destinatario" placeholder="Destinatario"/>
+                <br><br>
+                <textarea id="mensaje" placeholder="Mensaje..."></textarea>
+
+                <br>  
+                <p>Ingrese un color</p>
+                <input type="color" id="color"/>
+                <br>
+                <a id="mostrar">Generar Tarjeta de Felicitacion</a>
+
+                <p id="codigo"></p>
+            </article>
+        </section>
+    </section>
+<script src="js/funcionalidad.js"></script>
+<script src="js/sha256.js"></script>
+<footer>
+   <h6>Realizado Por: Javier Angel Reyes Rodriguez</h6> 
+</footer>
+</body>
+</html>
+
+
